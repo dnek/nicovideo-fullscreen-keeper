@@ -1,3 +1,10 @@
+const GM_addStyle = (content) => {
+    const styleEl = document.createElement('style');
+    styleEl.textContent = content;
+    document.body.appendChild(styleEl);
+    return styleEl;
+};
+
 // derived from https://github.com/dnek/nicovideo-comfortable-controller-fader
 const comfortableControllerFader = () => {
     const baseStyleEl = GM_addStyle(`
