@@ -1,0 +1,29 @@
+{
+    "name": "nicovideo-fullscreen-keeper",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "ニコニコ動画の連続再生で次の動画へ行くときにフルスクリーンが解除されるのを防ぎます。",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.nicovideo.jp/watch/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "inject.js"
+            ],
+            "matches": [
+                "https://www.nicovideo.jp/*"
+            ]
+        }
+    ],
+    "icons": {
+        "128": "icons/icon_128.png"
+    }
+}
